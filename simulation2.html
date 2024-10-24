@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulación de Transferencia de Calor</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+            display: block;
+            margin: 20px auto;
+        }
+        .controls {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center;">Simulación Interactiva de Transferencia de Calor</h1>
+
+    <!-- Controles para ajustar la temperatura y seleccionar material -->
+    <div class="controls">
+        <label for="tempSlider">Temperatura del líquido (°C):</label>
+        <input type="range" id="tempSlider" min="20" max="100" value="60">
+        <span id="tempValue">60</span>°C
+        
+        <br><br>
+
+        <label for="materialSelect">Material de la cuchara:</label>
+        <select id="materialSelect">
+            <option value="bueno">Aluminio</option>
+            <option value="malo">Madera</option>
+        </select>
+    </div>
+
+    <!-- Canvas para la simulación -->
+    <canvas id="heatCanvas" width="500" height="500"></canvas>
+
+    <script src="simulation.js"></script>
+</body>
+</html>
