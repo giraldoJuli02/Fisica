@@ -4,10 +4,10 @@ const ctx = canvas.getContext("2d");
         let temperature = 20;
         let conductivity = 0.5;  // Velocidad base para la madera
         let particles = [];
-        const spoonStartX = 280;
+        const spoonStartX = 200;
         const spoonWidth = 20;
         const spoonHeight = 100;
-        const spoonY = 250;
+        const spoonY = 100;
 
         // Función para crear partículas
         function createParticles() {
@@ -30,12 +30,12 @@ const ctx = canvas.getContext("2d");
                 if (p.x > spoonStartX && p.x < spoonStartX + spoonWidth) {
                     p.y -= p.speed * conductivity;  // Suben más rápido en la cuchara
                 } else {
-                    p.y += Math.random() * 0.5;  // Baja lentamente fuera de la cuchara
+                    // p.y += Math.random() * 0.5;  // Baja lentamente fuera de la cuchara
                 }
 
                 // Limitar las partículas al canvas
                 if (p.y > 450) p.y = 450;
-                if (p.y < 150) p.y = 150;
+                if (p.y < 100) p.y = 100;
             }
         }
 
