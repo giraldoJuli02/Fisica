@@ -30,7 +30,8 @@ const ctx = canvas.getContext("2d");
                 if (p.x > spoonStartX && p.x < spoonStartX + spoonWidth) {
                     p.y -= p.speed * conductivity;  // Suben más rápido en la cuchara
                 } else {
-                    // p.y += Math.random() * 0.5;  // Baja lentamente fuera de la cuchara
+                    p.y = Math.random() * 300 + 150;  // Baja lentamente fuera de la cuchara
+                    
                 }
 
                 // Limitar las partículas al canvas
